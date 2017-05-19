@@ -1,9 +1,9 @@
-This is a GitHub repository containing python scripts to convert Pascal VOC SBD labels to geoJson Labels for the SpaceNet competition. Note that this code works for the second SpaceNet competition.
+This is a GitHub repository containing python scripts to convert labels for the 2nd SpaceNet competition to labels for the Pascal VOC competition.
 
 Run the command:
 
-python pascal_to_spacenet.py jpg_dir tif_dir geojson_dir updated_geojson_dir
+python spacenet_labels_dir_to_voc_labels_dir.py raster_dir vector_dir cls_dir inst_dir 
 
-in a directory containing a subdirectory of raster tif files, a subdirectory of raster jpg files, an empty subdirectory for geojson file outputs, and another empty subdirectory for further processed geojson file outputs
+in a directory containing a subdirectory of raster tif files, a subdirectory of vector geojson files, an empty class labels subdirectory, and another empty instance labels subdirectory.
 
-The resulting geojson output labels will be in updated_geojson_dir.
+The corresponding Pascal VOC labels will be processed and placed in the two empty class and instance directories.  This allows for segmentation algorithms developed for the Pascal VOC competition to be applied to the SpaceNet data.
